@@ -1,0 +1,5 @@
+package com.foodEase.service.interfaces;
+
+public interface AdminService {
+
+}

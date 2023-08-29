@@ -1,0 +1,5 @@
+package com.foodEase.request;
+
+public class OrderProductDetail {
+
+}

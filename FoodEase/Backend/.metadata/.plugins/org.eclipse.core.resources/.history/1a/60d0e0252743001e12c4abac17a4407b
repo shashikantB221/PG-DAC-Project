@@ -1,0 +1,9 @@
+package com.foodEase.repository;
+
+public interface OrderRepository {
+
+	 List<Orders> findByUsersAndStatus(Users users, String status);
+	 List<Orders> findByProviderEmailAndStatus(String providerEmail,String status);
+
+	 Orders findById(Long id);
+}

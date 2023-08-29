@@ -1,0 +1,5 @@
+package com.foodEase.repository;
+
+public interface ProductRepository {
+
+}

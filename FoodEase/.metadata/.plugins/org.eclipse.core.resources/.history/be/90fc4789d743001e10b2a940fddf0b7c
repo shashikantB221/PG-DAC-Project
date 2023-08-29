@@ -1,0 +1,50 @@
+package com.foodEase.service.implementations;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.foodEase.model.Providers;
+import com.foodEase.repository.ProviderRepository;
+import com.foodEase.service.interfaces.ProviderService;
+
+
+
+@Service
+public class ProviderServiceImpl implements ProviderService{
+
+	 @Autowired
+	 private ProviderRepository providerRepository;
+
+	@Override
+	public void saveProvider(Providers providers) {
+		providerRepository.save(providers);
+	}
+
+	@Override
+	public List<Providers> findAll() {
+		return providerRepository.findAll();
+	}
+
+	@Override
+	public void deleteProvider(Providers providers) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Providers findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Providers findByEmailAndPassword(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

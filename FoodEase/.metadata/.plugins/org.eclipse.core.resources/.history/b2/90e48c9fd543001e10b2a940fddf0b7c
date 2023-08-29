@@ -1,0 +1,38 @@
+package com.foodEase.service.implementations;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.foodEase.model.Products;
+import com.foodEase.model.Providers;
+import com.foodEase.service.interfaces.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public void saveProduct(Products products) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Products> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Products> findByProviders(Providers providers) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

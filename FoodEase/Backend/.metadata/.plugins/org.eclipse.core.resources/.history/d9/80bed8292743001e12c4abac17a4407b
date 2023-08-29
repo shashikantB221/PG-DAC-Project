@@ -1,0 +1,16 @@
+package com.foodEase.repository;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.foodEase.model.Orders;
+
+@Repository
+public interface OrderRepository {
+
+	 List<Orders> findByUsersAndStatus(Users users, String status);
+	 List<Orders> findByProviderEmailAndStatus(String providerEmail,String status);
+
+	 Orders findById(Long id);
+}

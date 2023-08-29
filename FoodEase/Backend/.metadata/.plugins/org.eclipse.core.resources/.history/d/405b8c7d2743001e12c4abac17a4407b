@@ -1,0 +1,15 @@
+package com.foodEase.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.foodEase.model.Products;
+import com.foodEase.model.Providers;
+
+public interface ProductRepository extends JpaRepository<Products, Integer> {
+
+	 List<Products> findByProviders(Providers providers);
+
+	 Products findById(Long id);
+}

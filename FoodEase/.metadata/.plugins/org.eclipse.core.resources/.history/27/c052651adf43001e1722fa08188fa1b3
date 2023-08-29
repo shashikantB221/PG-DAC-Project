@@ -1,0 +1,40 @@
+package com.foodEase.service.implementations;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.foodEase.model.Products;
+import com.foodEase.model.Providers;
+import com.foodEase.repository.ProductRepository;
+import com.foodEase.repository.ProviderRepository;
+import com.foodEase.service.interfaces.ProductService;
+import com.foodEase.service.interfaces.ProviderService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+    ProductRepository productRepository;
+	
+    @Override
+    public void saveProduct (Products products) {
+        productRepository.save(products);
+    }
+
+    @Override
+    public List<Products> findAll() {
+        return productRepository.findAll();
+    }
+
+    @Override
+    public List<Products> findByProviders(Providers providers) {
+        return productRepository.findByProviders(providers);
+    }
+
+    @Override
+    public  void deleteById(Integer id) {
+        productRepository.deleteById(id);
+    }
+}
